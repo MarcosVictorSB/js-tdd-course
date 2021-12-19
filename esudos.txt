@@ -1,0 +1,8 @@
+spy = são usados para vigiar informação sobre chamadas de funções.
+quando usar: testar callbacks e quais methodos foram chamados.
+
+stub = substituir a função alvo.
+quando usar: controlar um comportamento de um teste / simplificar o teste de codigo assincrono.
+
+mocks: são metodos falso, com response e request pre programados.
+quando usar: deve usar quando precisar de um stubs e multiplos comportamentos.
