@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/MarcosVictorSB/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/MarcosVictorSB/js-tdd-course#readme"
+  "homepage": "https://github.com/MarcosVictorSB/js-tdd-course#readme",
+  "dependencies": {
+    "gitignore": "^0.7.0"
+  }
 }
