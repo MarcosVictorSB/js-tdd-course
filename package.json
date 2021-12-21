@@ -4,10 +4,16 @@
   "description": "Nossa Biblioteca do curso js com tdd na pratica",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test",
     "prepush": "npm run lint",
     "lint": "./node_modules/.bin/eslint src/*js",
     "prepare": "husky install"
+  },
+  "nyc": {
+    "reporter": ["text", "html"],
+    "excludes": ["test/**"]
   },
   "repository": {
     "type": "git",
@@ -25,14 +31,18 @@
   },
   "homepage": "https://github.com/MarcosVictorSB/js-tdd-course#readme",
   "dependencies": {
-    "gitignore": "^0.7.0"
+    "gitignore": "^0.7.0",
+    "sinon-chai": "^3.7.0"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.3.4",
     "eslint": "^8.5.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "husky": "^7.0.4",
-    "mocha": "^9.1.3"
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0"
   }
 }
